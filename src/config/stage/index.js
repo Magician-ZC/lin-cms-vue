@@ -6,16 +6,6 @@ import pluginsConfig from './plugin'
 // eslint-disable-next-line import/no-mutable-exports
 let homeRouter = [
   {
-    title: '林间有风',
-    type: 'view',
-    name: Symbol('about'),
-    route: '/about',
-    filePath: 'view/about/about.vue',
-    inNav: true,
-    icon: 'iconfont icon-iconset0103',
-    order: 1,
-  },
-  {
     title: '日志管理',
     type: 'view',
     name: Symbol('log'),
@@ -23,7 +13,7 @@ let homeRouter = [
     filePath: 'view/log/log.vue',
     inNav: true,
     icon: 'iconfont icon-rizhiguanli',
-    order: 2,
+    order: 1,
     permission: ['查询所有日志'],
   },
   {
@@ -36,7 +26,7 @@ let homeRouter = [
     icon: 'iconfont icon-rizhiguanli',
   },
   {
-    title: '404',
+    title: '首页',
     type: 'view',
     name: Symbol('404'),
     route: '/404',
@@ -49,9 +39,9 @@ let homeRouter = [
 ]
 
 // 接入插件
-const plugins = [...pluginsConfig]
-filterPlugin(homeRouter)
-homeRouter = homeRouter.concat(plugins)
+// const plugins = [...pluginsConfig]
+// filterPlugin(homeRouter)
+// homeRouter = homeRouter.concat(plugins)
 
 // 处理顺序
 homeRouter = Utils.sortByOrder(homeRouter)
